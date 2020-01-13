@@ -1,10 +1,11 @@
 import static java.lang.System.*;
 
-public class Sorting {
+public class Main {
 
     public static void main(String[] s) {
-        int[] numRandom = Utils.cleanRandNum(10);
+        int[] numRandom = Utils.randNum(10);
         // out.println(num.toString());
         Utils.printArray(numRandom);
+        Sorter.countingSort(numRandom);
     }
 }
