@@ -26,6 +26,29 @@ public class Utils {
         return numRandom;
     }
 
+    public static int[] fullCleanRand(int dim) {
+        Random rand = new Random();
+        ArrayList<Integer> num = new ArrayList<>();
+        int[] numRandom = new int[dim];
+        int min = -(dim / 2);
+        for (int i = 0; i < dim; i++)
+            num.add(min++);
+        for (int i = 0; i < numRandom.length; i++) {
+            int size = num.size();
+            numRandom[i] = num.remove(rand.nextInt(size));
+        }
+        return numRandom;
+    }
+
+    public static int[] fullRandNum(int dim, int nMax) {
+        Random rand = new Random();
+        int[] numRandom = new int[dim];
+        for (int i = 0; i < numRandom.length; i++) {
+            numRandom[i] = rand.nextBoolean() ? rand.nextInt(nMax + 1) : -rand.nextInt(nMax + 1);
+        }
+        return numRandom;
+    }
+
     public static void printArray(int[] array) {
         out.print("[");
         for (int i = 0; i < array.length; i++)
