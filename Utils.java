@@ -17,10 +17,19 @@ public class Utils {
         return numRandom;
     }
 
+    public static int[] randNum(int nMax) {
+        Random rand = new Random();
+        int[] numRandom = new int[nMax];
+        for (int i = 0; i < numRandom.length; i++) {
+            numRandom[i] = rand.nextInt(nMax);
+        }
+        return numRandom;
+    }
+
     public static void printArray(int[] array) {
         out.print("[");
         for (int i = 0; i < array.length; i++)
             out.print(i == array.length - 1 ? array[i] : (array[i] + ", "));
-        out.print("]");
+        out.print("]\n");
     }
 }
