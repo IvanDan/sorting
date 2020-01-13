@@ -5,20 +5,22 @@ import static java.lang.System.*;
 public class Sorting {
     static Random rand = new Random();
     static ArrayList<Integer> num = new ArrayList<>();
-    static int nMax = 20;
+    static int nMax = 10;
     static int[] num2 = new int[nMax];
 
     private static void randNum() {
         int aRandNum;
-        for (int i = 0; i < nMax; i++) {
-            aRandNum = rand.nextInt(nMax) + 1;
-            while (num.size() != nMax) {
-                if (!num.contains(aRandNum)) {
-                    num.add(aRandNum);
-                } else {
-                    aRandNum = rand.nextInt(nMax) + 1;
-                }
+        int countWhile;
+        aRandNum = rand.nextInt(nMax) + 1;
+        countWhile = 1;
+        while (num.size() != nMax) {
+            out.println("countWhile -> " + countWhile);
+            if (!num.contains(aRandNum)) {
+                num.add(aRandNum);
+            } else {
+                aRandNum = rand.nextInt(nMax) + 1;
             }
+            countWhile++;
         }
     }
 
@@ -29,6 +31,5 @@ public class Sorting {
     public static void main(String[] s) {
         randNum();
         out.println(num.toString());
-        out.println(num.size());
     }
 }
