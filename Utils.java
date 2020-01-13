@@ -40,6 +40,12 @@ public class Utils {
         return numRandom;
     }
 
+    /**
+     * 
+     * @param dim  la dimensione dell'array
+     * @param nMax il range dei numeri random
+     * @return array con numeri random positivi e negativi
+     */
     public static int[] fullRandNum(int dim, int nMax) {
         Random rand = new Random();
         int[] numRandom = new int[dim];
