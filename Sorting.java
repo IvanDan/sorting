@@ -5,7 +5,7 @@ import static java.lang.System.*;
 public class Sorting {
     static Random rand = new Random();
     static ArrayList<Integer> num = new ArrayList<>();
-    static int nMax = 200;
+    static int nMax = 200000;
     static int[] numRandom = new int[nMax];
 
     private static void randNum() {
@@ -31,6 +31,6 @@ public class Sorting {
     public static void main(String[] s) {
         randNum();
         // out.println(num.toString());
-        arrayToString(numRandom);
+        // arrayToString(numRandom);
     }
 }
