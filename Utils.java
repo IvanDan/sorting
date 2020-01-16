@@ -4,6 +4,13 @@ import static java.lang.System.*;
 
 public class Utils {
 
+    public static String converter(Long millisec) {
+        long minute = millisec / 60000;
+        long second = millisec % 60000 / 1000;
+        long ms = millisec % 60000 % 1000;
+        return(minute + "m " + second + "s " + ms + "ms");
+    }
+
     public static int[] cleanRandNum(int nMax) {
         Random rand = new Random();
         ArrayList<Integer> num = new ArrayList<>();
